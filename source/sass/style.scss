@@ -1,2 +1,11 @@
 /* Плагины */
 @import "normalize";
+@import "fonts";
+@import "variables";
+@import "mixin";
+@import "global";
+
+@import "blocks/container";
+@import "blocks/header";
+@import "blocks/about";
+@import "blocks/footer";

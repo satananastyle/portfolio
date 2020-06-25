@@ -1,0 +1,38 @@
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+
+  img {
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+  }
+
+  div {
+    width: 45%;
+  }
+
+  h2 {
+    margin: 0;
+    margin-bottom: 30px;
+
+    font-weight: 400;
+
+    @include forum;
+    @include font(45px, 49px);
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 10px;
+
+    @include eb-garamond;
+    @include font(21px, 23px);
+  }
+}

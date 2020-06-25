@@ -1,0 +1,39 @@
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px;
+
+  border-top: 3px solid $green;
+
+  a {
+    display: flex;
+    align-items: center;
+    margin: 0 30px;
+
+    text-decoration: none;
+
+    @include not-hover;
+
+    &:hover,
+    &:focus {
+      color: $blue;
+
+      @include hover;
+
+      svg {
+        opacity: 1;
+      }
+    }
+  }
+
+  svg {
+    margin-right: 15px;
+
+    opacity: 0.7;
+
+    transition: 0.3s;
+
+    fill: $blue;
+  }
+}
