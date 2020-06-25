@@ -1,0 +1,19 @@
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Forum";
+
+  font-display: swap;
+  src: url("../fonts/Forum.woff2") format("woff2"),
+  url("../fonts/Forum.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  font-family: "EB Garamond";
+
+  font-display: swap;
+  src: url("../fonts/EBGaramond.woff2") format("woff2"),
+  url("../fonts/EBGaramond.woff") format("woff");
+}

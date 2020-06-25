@@ -309,3 +309,222 @@ template {
  */
 [hidden] {
   display: none; }
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Forum";
+  font-display: swap;
+  src: url("../fonts/Forum.woff2") format("woff2"), url("../fonts/Forum.woff") format("woff"); }
+
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  font-family: "EB Garamond";
+  font-display: swap;
+  src: url("../fonts/EBGaramond.woff2") format("woff2"), url("../fonts/EBGaramond.woff") format("woff"); }
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+  font-family: "EB Garamond", "Times New Roman", sans-serif; }
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  -webkit-tap-highlight-color: transparent; }
+
+body {
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+  color: black;
+  background-color: #eae5e5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth; }
+
+a {
+  color: inherit; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+.visually-hidden,
+.form-radio input[type="radio"],
+.form-checkbox input[type="checkbox"],
+.form-radio-checkbox input[type="radio"],
+.form-radio-checkbox input[type="checkbox"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%); }
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-appearance: none; }
+
+button {
+  font-family: inherit; }
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 calc(50% - 590px); }
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+  border-bottom: 3px solid #025c2a; }
+
+.header__logo {
+  text-decoration: none;
+  font-family: "Forum", "Times New Roman", sans-serif;
+  font-size: 25px;
+  line-height: 28px; }
+  .header__logo:not(:hover) {
+    -webkit-transition: 0.3s;
+    transition: 0.3s; }
+  .header__logo[href]:hover, .header__logo[href]:focus {
+    color: #0b8c85;
+    outline: none;
+    cursor: pointer;
+    -webkit-transition: 0.3s;
+    transition: 0.3s; }
+  .header__logo span {
+    display: block;
+    font-size: 14px;
+    line-height: 16px; }
+
+.header__nav a {
+  display: inline-block;
+  margin-right: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: "Forum", "Times New Roman", sans-serif; }
+  .header__nav a:not(:hover) {
+    -webkit-transition: 0.3s;
+    transition: 0.3s; }
+  .header__nav a:not([href]) {
+    color: #0b8c85; }
+  .header__nav a:last-child {
+    margin-right: 0; }
+  .header__nav a:hover, .header__nav a:focus {
+    color: #0b8c85;
+    outline: none;
+    cursor: pointer;
+    -webkit-transition: 0.3s;
+    transition: 0.3s; }
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px; }
+  .about img {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    -o-object-fit: cover;
+       object-fit: cover; }
+  .about div {
+    width: 45%; }
+  .about h2 {
+    margin: 0;
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-family: "Forum", "Times New Roman", sans-serif;
+    font-size: 45px;
+    line-height: 49px; }
+  .about p {
+    margin: 0;
+    margin-bottom: 10px;
+    font-family: "EB Garamond", "Times New Roman", sans-serif;
+    font-size: 21px;
+    line-height: 23px; }
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 30px;
+  border-top: 3px solid #025c2a; }
+  .footer a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 30px;
+    text-decoration: none; }
+    .footer a:not(:hover) {
+      -webkit-transition: 0.3s;
+      transition: 0.3s; }
+    .footer a:hover, .footer a:focus {
+      color: #0b8c85;
+      outline: none;
+      cursor: pointer;
+      -webkit-transition: 0.3s;
+      transition: 0.3s; }
+      .footer a:hover svg, .footer a:focus svg {
+        opacity: 1; }
+  .footer svg {
+    margin-right: 15px;
+    opacity: 0.7;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    fill: #0b8c85; }

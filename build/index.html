@@ -8,12 +8,60 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="description" content="Здесь должно быть описание">
 
-    <!-- <link rel="preload" href="fonts/ibmplexsans-regular.woff2" as="font" crossorigin="anonymous"> здесь будут предзагружаться шрифты-->
+    <link rel="preload" href="fonts/Forum.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/EBGaramond.woff2" as="font" crossorigin="anonymous">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
-  <body>
-    <main>
-      <h1>Привет, мир</h1>
+  <body class="container">
+    <header class="header">
+      <a class="header__logo">
+        Анастасия Кочерженко
+        <span>Вертальщик/Junior Frontend-разработчик</span>
+      </a>
+      <p></p>
+      <nav class="header__nav">
+        <a>Обо мне</a>
+        <a href="#">Резюме</a>
+        <a href="#">Портфолио</a>
+        <a href="#">Контакты</a>
+      </nav>
+    </header>
+    <main class="about">
+      <img src="img/avatar@1x.jpg.jpg" width="1440" height="2160" srcset="img/avatar@1x.jpg 1x, img/avatar@2x.jpg 2x" alt="Мое фото">
+      <div>
+        <h2>Привет, будем знакомы</h2>
+        <p>Меня зовут Нана, а полное имя Анастасия. Мне 25 лет, живу в городе Санкт-Петербург. В свободное время увлекаюсь
+          настольными играми, postcrossing и танцами.</p>
+        <p>У меня не много коммерческого опыта, но я готова погрyжаться в задачи с головой, расти и развиваться</p>
+      </div>
     </main>
+    <footer class="footer">
+  <a href="tel:+79522743379">
+    <svg width="30" height="30">
+      <use xlink:href="img/sprite.svg#icon-phone"></use>
+    </svg>
+    +79522743379
+  </a>
+  <a href="mailto:zlukana@gmail.com">
+    <svg width="30" height="30">
+      <use xlink:href="img/sprite.svg#icon-email"></use>
+    </svg>
+    zlukanana@gmail.com
+  </a>
+  <a href="https://vk.com/satananastyle">
+    <svg width="30" height="30">
+      <use xlink:href="img/sprite.svg#icon-vk"></use>
+    </svg>
+    ВКонтакте
+  </a>
+  <a href="https://github.com/satananastyle">
+    <svg width="30" height="30">
+      <use xlink:href="img/sprite.svg#icon-github"></use>
+    </svg>
+    Гитхаб
+  </a>
+</footer>
+
+    <script src="js/main.js"></script>
   </body>
 </html>

@@ -1,0 +1,58 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+
+  border-bottom: 3px solid $green;
+}
+
+.header__logo {
+  text-decoration: none;
+
+  @include forum;
+  @include font(25px, 28px);
+  @include not-hover;
+
+  &[href]:hover,
+  &[href]:focus {
+    color: $blue;
+
+    @include hover;
+  }
+
+  span {
+    display: block;
+
+    @include font(14px, 16px);
+  }
+}
+
+.header__nav {
+  a {
+    display: inline-block;
+    margin-right: 20px;
+
+    text-transform: uppercase;
+    text-decoration: none;
+
+    @include forum;
+    @include not-hover;
+
+    &:not([href]) {
+      color: $blue;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover,
+    &:focus {
+      color: $blue;
+
+      @include hover;
+    }
+  }
+}
