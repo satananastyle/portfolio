@@ -20,7 +20,7 @@ gulp.task('html', () => gulp.src('source/*.html')
   .pipe(posthtml([
     include()
   ]))
-  .pipe(gulp.dest('build'))
+  .pipe(gulp.dest('docs'))
 );
 
 gulp.task('style', () => gulp.src('source/sass/style.scss')
@@ -30,29 +30,29 @@ gulp.task('style', () => gulp.src('source/sass/style.scss')
   .pipe(postcss([
     autoprefixer()
   ]))
-  .pipe(gulp.dest('build/css'))
+  .pipe(gulp.dest('docs/css'))
   .pipe(minify())
   .pipe(rename('style.min.css'))
   .pipe(sourcemaps.write('./'))
-  .pipe(gulp.dest('build/css'))
+  .pipe(gulp.dest('docs/css'))
   .pipe(server.stream())
 );
 
 gulp.task('js', () => gulp.src(['source/js/**/*.js', '!source/js/plugins/*.js'])
   .pipe(plumber())
   .pipe(concat('main.js'))
-  .pipe(gulp.dest('build/js/'))
+  .pipe(gulp.dest('docs/js/'))
 );
 
 gulp.task('jsPlugins', () => gulp.src(['source/js/plugins/*.js'])
   .pipe(plumber())
   .pipe(concat('vendor.js'))
-  .pipe(gulp.dest('build/js/'))
+  .pipe(gulp.dest('docs/js/'))
 );
 
 gulp.task('json', () => gulp.src('source/json/*.json')
   .pipe(plumber())
-  .pipe(gulp.dest('build/json'))
+  .pipe(gulp.dest('docs/json'))
 );
 
 gulp.task('images', () => gulp.src('source/img/**/*.{gif,png,jpg,svg}')
@@ -61,7 +61,7 @@ gulp.task('images', () => gulp.src('source/img/**/*.{gif,png,jpg,svg}')
     imagemin.jpegtran({progressive: true}),
     imagemin.svgo()
   ]))
-  .pipe(gulp.dest('build/img/'))
+  .pipe(gulp.dest('docs/img/'))
 );
 
 gulp.task('sprite', () => gulp.src('source/img/sprite/*.svg')
@@ -69,7 +69,7 @@ gulp.task('sprite', () => gulp.src('source/img/sprite/*.svg')
     inlineSvg: true
   }))
   .pipe(rename('sprite.svg'))
-  .pipe(gulp.dest('build/img'))
+  .pipe(gulp.dest('docs/img'))
 );
 
 gulp.task('copy', () => gulp.src([
@@ -81,16 +81,16 @@ gulp.task('copy', () => gulp.src([
   {
     base: 'source'
   })
-    .pipe(gulp.dest('build'))
+    .pipe(gulp.dest('docs'))
 );
 
 gulp.task('clean', () =>
-  del('build')
+  del('docs')
 );
 
 gulp.task('serve', () => {
   server.init({
-    server: 'build/',
+    server: 'docs/',
     notify: false,
     open: true,
     cors: true,
@@ -104,4 +104,4 @@ gulp.task('serve', () => {
   gulp.watch('source/js/**/*.js', gulp.series('jsPlugins', 'js')).on('change', server.reload);
 });
 
-gulp.task('build', gulp.series('clean', 'images', 'sprite', 'copy', 'style', 'html', 'js', 'json', 'jsPlugins'));
+gulp.task('docs', gulp.series('clean', 'images', 'sprite', 'copy', 'style', 'html', 'js', 'json', 'jsPlugins'));

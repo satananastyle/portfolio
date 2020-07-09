@@ -41,9 +41,9 @@
   },
   "private": true,
   "scripts": {
-    "build": "gulp build",
+    "docs": "gulp docs",
     "editorconfig": "editorconfig-cli",
-    "start": "npm run build && gulp serve",
+    "start": "npm run docs && gulp serve",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "eslint": "eslint source/js",
     "test": "npm run editorconfig && npm run stylelint && npm run eslint"
